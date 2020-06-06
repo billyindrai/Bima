@@ -8,11 +8,11 @@ public class KendaliPemain : MonoBehaviour {
 
     public Rigidbody2D Bodi;
 
-    public Animator animator;
+    // public Animator animator;
 
     public Collider2D Sensor;
     public Collider2D Lantai, ObjekPasif;
-    public Collider2D[] Rintangan;
+    // public Collider2D[] Rintangan;
 
     public Text scoreText;
 
@@ -23,9 +23,9 @@ public class KendaliPemain : MonoBehaviour {
     public float Kecepatan;
     public float TinggiLompatan;
 
-    public AudioSource jump,ikan,pukul;
+    // public AudioSource jump,ikan,pukul;
 
-    public GameObject Portal;
+    // public GameObject Portal;
     public int TotalTeks;
 
     bool HadapKanan = true;
@@ -41,11 +41,11 @@ public class KendaliPemain : MonoBehaviour {
     public void TambahTeks() {
         JumlahTeks += 1;
         scoreText.text = JumlahTeks.ToString("0");
-        ikan.Play();
+        // ikan.Play();
 
-        int currentHighScore = PlayerPrefs.GetInt("HighScore",0);
-        int currentScore = JumlahTeks+currentHighScore;
-        PlayerPrefs.SetInt("HighScore",currentScore);
+        // int currentHighScore = PlayerPrefs.GetInt("HighScore",0);
+        // int currentScore = JumlahTeks+currentHighScore;
+        // PlayerPrefs.SetInt("HighScore",currentScore);
 
         int Score = PlayerPrefs.GetInt("Score",0);
         int currentScore1 = JumlahTeks;
@@ -64,48 +64,48 @@ public class KendaliPemain : MonoBehaviour {
         Mendarat = Physics2D.IsTouching(Sensor, Lantai);
         Mendarat1 = Physics2D.IsTouching(Sensor, ObjekPasif);
 
-        for(int i=0; i < Rintangan.Length; i++ ){
-            Mendarat2 = Physics2D.IsTouching(Sensor, Rintangan[i]);
-                if (Input.GetKeyDown(KeyCode.Space) && Mendarat2 == true){
-                    animator.SetBool("Jumping",true);
-                    Bodi.velocity = Vector2.up * TinggiLompatan;
-                    jump.Play();
-                } else if (Mendarat2 == true){
-                    animator.SetBool("Jumping",false);
-                }
-        }
+        // for(int i=0; i < Rintangan.Length; i++ ){
+        //     Mendarat2 = Physics2D.IsTouching(Sensor, Rintangan[i]);
+        //         if (Input.GetKeyDown(KeyCode.Space) && Mendarat2 == true){
+        //             animator.SetBool("Jumping",true);
+        //             Bodi.velocity = Vector2.up * TinggiLompatan;
+        //             // jump.Play();
+        //         } else if (Mendarat2 == true){
+        //             animator.SetBool("Jumping",false);
+        //         }
+        // }
 
-        if (Input.GetKeyDown(KeyCode.Space) && Mendarat == true) {
-            animator.SetBool("Jumping",true);
+        if (Input.GetKeyDown(KeyCode.X) && Mendarat == true) {
+            // animator.SetBool("Jumping",true);
             Bodi.velocity = Vector2.up * TinggiLompatan;
-            jump.Play();
+            // jump.Play();
         }   else if (Mendarat == true){
-            animator.SetBool("Jumping",false);
+            // animator.SetBool("Jumping",false);
         }   else if (Input.GetKeyDown(KeyCode.Space) && Mendarat1 == true){
-            animator.SetBool("Jumping",true);
+            // animator.SetBool("Jumping",true);
             Bodi.velocity = Vector2.up * TinggiLompatan;
-            jump.Play();
+            // jump.Play();
         }   else if (Mendarat1 == true){
-            animator.SetBool("Jumping",false);
+            // animator.SetBool("Jumping",false);
         }
 
-        if (JumlahTeks == TotalTeks) {
-            Portal.SetActive(true);
-        }      
+        // if (JumlahTeks == TotalTeks) {
+        //     Portal.SetActive(true);
+        // }      
 
-        if (Input.GetButtonDown("Fire1")) {
-            pukul.Play();
-            animator.SetBool("Pukul",true);
-        } else {
-            animator.SetBool("Pukul",false);
-        }
+        // if (Input.GetButtonDown("Fire1")) {
+        //     pukul.Play();
+        //     animator.SetBool("Pukul",true);
+        // } else {
+        //     animator.SetBool("Pukul",false);
+        // }
     }
 
     void FixedUpdate() {
         float Akselerasi = Input.GetAxis("Horizontal");
         Bodi.velocity = new Vector2(Akselerasi * Kecepatan, Bodi.velocity.y);
 
-        animator.SetFloat("Speed", Mathf.Abs(Akselerasi));
+        // animator.SetFloat("Speed", Mathf.Abs(Akselerasi));
 
         if(Akselerasi > 0 && HadapKanan == false) {
             Berpaling();
@@ -149,7 +149,8 @@ public class KendaliPemain : MonoBehaviour {
             numberOfHearts -= 1;
             PemainMati();
         } else if (Kena.gameObject.name == "Sensor Lubang" && numberOfHearts == 0) {
-            SceneManager.LoadScene("theend");
+            // SceneManager.LoadScene("theend");
+            PemainMati();
         }
     }
 }

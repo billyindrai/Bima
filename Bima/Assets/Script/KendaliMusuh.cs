@@ -58,6 +58,7 @@ public class KendaliMusuh : MonoBehaviour {
             //     animator.SetBool("Hurt",false);
             // }
         }else if (Kena.gameObject.name == Pemain.name && Pemain.GetComponent<KendaliPemain>().numberOfHearts == 0) {
+            Pemain.GetComponent<KendaliPemain>().PemainMati();
             SceneManager.LoadScene("theend");
         }
     }
