@@ -63,6 +63,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\Ammo.cs" />
+    <Compile Include="Assets\Script\Bullet.cs" />
+    <Compile Include="Assets\Script\Coin.cs" />
     <Compile Include="Assets\Script\Finish.cs" />
     <Compile Include="Assets\Script\HealthBar.cs" />
     <Compile Include="Assets\Script\HighScore.cs" />
@@ -70,16 +73,16 @@
     <Compile Include="Assets\Script\KendaliCekpoin.cs" />
     <Compile Include="Assets\Script\KendaliEs.cs" />
     <Compile Include="Assets\Script\KendaliKamera.cs" />
-    <Compile Include="Assets\Script\KendaliMusuh.cs" />
     <Compile Include="Assets\Script\KendaliPemain.cs" />
     <Compile Include="Assets\Script\KendaliPiranha.cs" />
     <Compile Include="Assets\Script\KendaliPortal.cs" />
     <Compile Include="Assets\Script\KendaliRintangan.cs" />
     <Compile Include="Assets\Script\KendaliRintangan1.cs" />
-    <Compile Include="Assets\Script\KendaliTeks.cs" />
+    <Compile Include="Assets\Script\KendaliTentara.cs" />
     <Compile Include="Assets\Script\Navigasi.cs" />
     <Compile Include="Assets\Script\Score.cs" />
     <Compile Include="Assets\Script\Timer.cs" />
+    <Compile Include="Assets\Script\Weapon.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/Billy/Kuliah/Pengembangan Game/Bima/Bima/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

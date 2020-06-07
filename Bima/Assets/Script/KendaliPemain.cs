@@ -26,7 +26,7 @@ public class KendaliPemain : MonoBehaviour {
     // public AudioSource jump,ikan,pukul;
 
     // public GameObject Portal;
-    public int TotalTeks;
+    public int TotalCoin;
 
     public HealthBar healthBar;
 
@@ -38,24 +38,25 @@ public class KendaliPemain : MonoBehaviour {
     bool Mendarat1 = true;
     bool Mendarat2 = true;
 
-    int JumlahTeks = 0;
+    int JumlahCoin = 0;
     
     Vector3 posisiAwal;
 
     
-    public void TambahTeks() {
-        JumlahTeks += 1;
-        scoreText.text = JumlahTeks.ToString("0");
+    public void TambahCoin() {
+        JumlahCoin += 1;
+        scoreText.text = JumlahCoin.ToString("0");
         // ikan.Play();
 
         // int currentHighScore = PlayerPrefs.GetInt("HighScore",0);
-        // int currentScore = JumlahTeks+currentHighScore;
+        // int currentScore = JumlahCoin+currentHighScore;
         // PlayerPrefs.SetInt("HighScore",currentScore);
 
         int Score = PlayerPrefs.GetInt("Score",0);
-        int currentScore1 = JumlahTeks;
+        int currentScore1 = JumlahCoin;
         PlayerPrefs.SetInt("Score",currentScore1);
     }
+
     public void UpdatePosisi(Vector3 Posisi) {
         posisiAwal = Posisi;
     }
@@ -88,7 +89,7 @@ public class KendaliPemain : MonoBehaviour {
             // jump.Play();
         }   else if (Mendarat == true){
             // animator.SetBool("Jumping",false);
-        }   else if (Input.GetKeyDown(KeyCode.Space) && Mendarat1 == true){
+        }   else if (Input.GetKeyDown(KeyCode.X) && Mendarat1 == true){
             // animator.SetBool("Jumping",true);
             Bodi.velocity = Vector2.up * TinggiLompatan;
             // jump.Play();
@@ -96,7 +97,7 @@ public class KendaliPemain : MonoBehaviour {
             // animator.SetBool("Jumping",false);
         }
 
-        // if (JumlahTeks == TotalTeks) {
+        // if (JumlahCoin == TotalCoin) {
         //     Portal.SetActive(true);
         // }      
 
@@ -162,6 +163,7 @@ public class KendaliPemain : MonoBehaviour {
     public void PemainMati() {
         transform.position = posisiAwal;
         Bodi.velocity = new Vector2(0f, 0f);
+        ResetHealth();
     }
 
      void OnCollisionEnter2D(Collision2D Kena) {
