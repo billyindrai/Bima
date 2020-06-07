@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Finish.cs" />
+    <Compile Include="Assets\Script\HealthBar.cs" />
     <Compile Include="Assets\Script\HighScore.cs" />
     <Compile Include="Assets\Script\KendaliBurung.cs" />
     <Compile Include="Assets\Script\KendaliCekpoin.cs" />

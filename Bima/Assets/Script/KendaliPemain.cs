@@ -28,6 +28,11 @@ public class KendaliPemain : MonoBehaviour {
     // public GameObject Portal;
     public int TotalTeks;
 
+    public HealthBar healthBar;
+
+    public int maxHealth = 4;
+    public int currentHealth;
+
     bool HadapKanan = true;
     bool Mendarat = true;
     bool Mendarat1 = true;
@@ -58,6 +63,8 @@ public class KendaliPemain : MonoBehaviour {
     public void Start() {
         Bodi = GetComponent<Rigidbody2D>();
         posisiAwal = transform.position;
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     void Update() {
@@ -138,6 +145,19 @@ public class KendaliPemain : MonoBehaviour {
     // public void Hurt(){
     //     Bodi.velocity = new Vector2(-10f, Bodi.velocity.y);
     // }
+
+    public void TakeDamage()
+    {
+        healthBar.SetHealth(currentHealth);
+        
+    }
+
+    public void ResetHealth()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+        
+    }
 
     public void PemainMati() {
         transform.position = posisiAwal;

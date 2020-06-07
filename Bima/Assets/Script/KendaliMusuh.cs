@@ -49,8 +49,13 @@ public class KendaliMusuh : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D Kena) {
         Pemain.GetComponent<KendaliPemain>().Heart();
         if (Kena.gameObject.name == Pemain.name && Pemain.GetComponent<KendaliPemain>().numberOfHearts > 0 ) {
-            Pemain.GetComponent<KendaliPemain>().numberOfHearts -= 1;
-            hit.Play();
+            Pemain.GetComponent<KendaliPemain>().currentHealth -= 1;
+            Pemain.GetComponent<KendaliPemain>().TakeDamage();
+            if(Pemain.GetComponent<KendaliPemain>().currentHealth == 0){
+               Pemain.GetComponent<KendaliPemain>().numberOfHearts -= 1;
+               Pemain.GetComponent<KendaliPemain>().ResetHealth();
+            }
+            // hit.Play();
 
             // animator.SetBool("Hurt",true);
             // if(Pemain.transform.position.x < transform.position.x){
@@ -58,8 +63,12 @@ public class KendaliMusuh : MonoBehaviour {
             //     animator.SetBool("Hurt",false);
             // }
         }else if (Kena.gameObject.name == Pemain.name && Pemain.GetComponent<KendaliPemain>().numberOfHearts == 0) {
-            Pemain.GetComponent<KendaliPemain>().PemainMati();
-            SceneManager.LoadScene("theend");
+            // Pemain.GetComponent<KendaliPemain>().PemainMati();
+            // SceneManager.LoadScene("theend");
+            Pemain.GetComponent<KendaliPemain>().currentHealth -= 1;
+            if(Pemain.GetComponent<KendaliPemain>().currentHealth == 0){
+               Pemain.GetComponent<KendaliPemain>().PemainMati();
+            }
         }
     }
 }
