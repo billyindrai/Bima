@@ -128,9 +128,11 @@ public class KendaliPemain : MonoBehaviour {
     void Berpaling() {
         HadapKanan = !HadapKanan;
 
-        Vector3 Skala = transform.localScale;
-        Skala.x *= -1;
-        transform.localScale = Skala;
+        // Vector3 Skala = transform.localScale;
+        // Skala.x *= -1;
+        // transform.localScale = Skala;
+
+        transform.Rotate(0f, 180f, 0f);
     }
 
     public void Heart(){
@@ -149,15 +151,27 @@ public class KendaliPemain : MonoBehaviour {
 
     public void TakeDamage()
     {
-        healthBar.SetHealth(currentHealth);
-        
+        healthBar.SetHealth(currentHealth);        
     }
+
+    public void KenaDamage(int damage)
+	{
+		currentHealth -= damage;
+        healthBar.SetHealth(currentHealth); 
+
+		if (numberOfHearts > 0 && currentHealth == 0)
+		{
+			numberOfHearts -=1;
+            ResetHealth();
+		}else if (numberOfHearts == 0 && currentHealth == 0){
+            PemainMati();
+        }
+	}
 
     public void ResetHealth()
     {
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
-        
+        healthBar.SetMaxHealth(maxHealth);    
     }
 
     public void PemainMati() {

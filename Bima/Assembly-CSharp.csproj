@@ -81,8 +81,10 @@
     <Compile Include="Assets\Script\KendaliTentara.cs" />
     <Compile Include="Assets\Script\Navigasi.cs" />
     <Compile Include="Assets\Script\Score.cs" />
+    <Compile Include="Assets\Script\TentaraBullet.cs" />
     <Compile Include="Assets\Script\Timer.cs" />
     <Compile Include="Assets\Script\Weapon.cs" />
+    <Compile Include="Assets\Script\WeaponTentara.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/Billy/Kuliah/Pengembangan Game/Bima/Bima/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

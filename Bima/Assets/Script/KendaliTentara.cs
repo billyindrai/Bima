@@ -19,7 +19,7 @@ public class KendaliTentara : MonoBehaviour {
     // public Animator animator;
     public int health = 100;
 
-	// public GameObject deathEffect;
+    private Vector3 startingposition;
 
 	public void TakeDamage (int damage)
 	{
@@ -37,33 +37,33 @@ public class KendaliTentara : MonoBehaviour {
 		Destroy(gameObject);
 	}
 
-    void FixedUpdate() {
-        if (HadapKanan) {
-            Tujuan = BatasKanan + 2;
-        }
-        else {
-            Tujuan = BatasKiri - 2;
-        }
+    // void FixedUpdate() {
+    //     if (HadapKanan) {
+    //         Tujuan = BatasKanan + 2;
+    //     }
+    //     else {
+    //         Tujuan = BatasKiri - 2;
+    //     }
 
 
-        float PosX = Mathf.SmoothDamp(transform.position.x, Tujuan, ref NilaiPerubahan, Akselerasi);
-        transform.position = new Vector2(PosX, transform.position.y);
+    //     float PosX = Mathf.SmoothDamp(transform.position.x, Tujuan, ref NilaiPerubahan, Akselerasi);
+    //     transform.position = new Vector2(PosX, transform.position.y);
 
-        if (transform.position.x >= BatasKanan && HadapKanan) {
-            Berpaling();
-        }
-        else if (transform.position.x <= BatasKiri && !HadapKanan) {
-            Berpaling();
-        }
-    }
+    //     if (transform.position.x >= BatasKanan && HadapKanan) {
+    //         Berpaling();
+    //     }
+    //     else if (transform.position.x <= BatasKiri && !HadapKanan) {
+    //         Berpaling();
+    //     }
+    // }
 
-    void Berpaling() {
-        HadapKanan = !HadapKanan;
+    // void Berpaling() {
+    //     HadapKanan = !HadapKanan;
 
-        Vector3 Skala = transform.localScale;
-        Skala.x *= -1;
-        transform.localScale = Skala;
-    }
+    //     Vector3 Skala = transform.localScale;
+    //     Skala.x *= -1;
+    //     transform.localScale = Skala;
+    // }
 
     private void OnCollisionEnter2D(Collision2D Kena) {
         Pemain.GetComponent<KendaliPemain>().Heart();
