@@ -37,58 +37,58 @@ public class KendaliTentara : MonoBehaviour {
 		Destroy(gameObject);
 	}
 
-    // void FixedUpdate() {
-    //     if (HadapKanan) {
-    //         Tujuan = BatasKanan + 2;
-    //     }
-    //     else {
-    //         Tujuan = BatasKiri - 2;
-    //     }
+    void FixedUpdate() {
+        if (HadapKanan) {
+            Tujuan = BatasKanan + 2;
+        }
+        else {
+            Tujuan = BatasKiri - 2;
+        }
 
 
-    //     float PosX = Mathf.SmoothDamp(transform.position.x, Tujuan, ref NilaiPerubahan, Akselerasi);
-    //     transform.position = new Vector2(PosX, transform.position.y);
+        float PosX = Mathf.SmoothDamp(transform.position.x, Tujuan, ref NilaiPerubahan, Akselerasi);
+        transform.position = new Vector2(PosX, transform.position.y);
 
-    //     if (transform.position.x >= BatasKanan && HadapKanan) {
-    //         Berpaling();
-    //     }
-    //     else if (transform.position.x <= BatasKiri && !HadapKanan) {
-    //         Berpaling();
-    //     }
-    // }
-
-    // void Berpaling() {
-    //     HadapKanan = !HadapKanan;
-
-    //     Vector3 Skala = transform.localScale;
-    //     Skala.x *= -1;
-    //     transform.localScale = Skala;
-    // }
-
-    private void OnCollisionEnter2D(Collision2D Kena) {
-        Pemain.GetComponent<KendaliPemain>().Heart();
-        if (Kena.gameObject.name == Pemain.name && Pemain.GetComponent<KendaliPemain>().numberOfHearts > 0 ) {
-            Pemain.GetComponent<KendaliPemain>().currentHealth -= 1;
-            Pemain.GetComponent<KendaliPemain>().TakeDamage();
-            if(Pemain.GetComponent<KendaliPemain>().currentHealth == 0){
-               Pemain.GetComponent<KendaliPemain>().numberOfHearts -= 1;
-               Pemain.GetComponent<KendaliPemain>().ResetHealth();
-            }
-            // hit.Play();
-
-            // animator.SetBool("Hurt",true);
-            // if(Pemain.transform.position.x < transform.position.x){
-            //     Pemain.GetComponent<KendaliPemain>().Hurt();
-            //     animator.SetBool("Hurt",false);
-            // }
-        }else if (Kena.gameObject.name == Pemain.name && Pemain.GetComponent<KendaliPemain>().numberOfHearts == 0) {
-            // Pemain.GetComponent<KendaliPemain>().PemainMati();
-            // SceneManager.LoadScene("theend");
-            Pemain.GetComponent<KendaliPemain>().currentHealth -= 1;
-            Pemain.GetComponent<KendaliPemain>().TakeDamage();
-            if(Pemain.GetComponent<KendaliPemain>().currentHealth == 0){
-               Pemain.GetComponent<KendaliPemain>().PemainMati();
-            }
+        if (transform.position.x >= BatasKanan && HadapKanan) {
+            Berpaling();
+        }
+        else if (transform.position.x <= BatasKiri && !HadapKanan) {
+            Berpaling();
         }
     }
+
+    void Berpaling() {
+        HadapKanan = !HadapKanan;
+
+        Vector3 Skala = transform.localScale;
+        Skala.x *= -1;
+        transform.localScale = Skala;
+    }
+
+    // private void OnCollisionEnter2D(Collision2D Kena) {
+    //     Pemain.GetComponent<KendaliPemain>().Heart();
+    //     if (Kena.gameObject.name == Pemain.name && Pemain.GetComponent<KendaliPemain>().numberOfHearts > 0 ) {
+    //         Pemain.GetComponent<KendaliPemain>().currentHealth -= 1;
+    //         Pemain.GetComponent<KendaliPemain>().TakeDamage();
+    //         if(Pemain.GetComponent<KendaliPemain>().currentHealth == 0){
+    //            Pemain.GetComponent<KendaliPemain>().numberOfHearts -= 1;
+    //            Pemain.GetComponent<KendaliPemain>().ResetHealth();
+    //         }
+    //         // hit.Play();
+
+    //         // animator.SetBool("Hurt",true);
+    //         // if(Pemain.transform.position.x < transform.position.x){
+    //         //     Pemain.GetComponent<KendaliPemain>().Hurt();
+    //         //     animator.SetBool("Hurt",false);
+    //         // }
+    //     }else if (Kena.gameObject.name == Pemain.name && Pemain.GetComponent<KendaliPemain>().numberOfHearts == 0) {
+    //         // Pemain.GetComponent<KendaliPemain>().PemainMati();
+    //         // SceneManager.LoadScene("theend");
+    //         Pemain.GetComponent<KendaliPemain>().currentHealth -= 1;
+    //         Pemain.GetComponent<KendaliPemain>().TakeDamage();
+    //         if(Pemain.GetComponent<KendaliPemain>().currentHealth == 0){
+    //            Pemain.GetComponent<KendaliPemain>().PemainMati();
+    //         }
+    //     }
+    // }
 }

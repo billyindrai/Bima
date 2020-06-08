@@ -4,18 +4,34 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class WeaponTentara : MonoBehaviour
-{
-    public GameObject Tentara;
+{   
+    public GameObject Pemain, Tentara;
     public Transform firePoint;
-    public GameObject bulletPrefab;
 
-   
+    [SerializeField]
+    public GameObject bulletPrefab;
+    float fireRate;
+    float nextFire;
+
+	void Start () {
+		fireRate = 1f;
+        nextFire = Time.time;
+	}
+
+    private void OnTriggerStay2D(Collider2D Kena) {
+        if (Kena.gameObject.name == Pemain.name){
+            Shoot();
+        } 
+    }
     // Update is called once per frame
     void Update(){
-        Shoot();          
+        // Shoot();          
     }
 
     void Shoot(){
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        if(Time.time > nextFire){
+            Instantiate (bulletPrefab, transform.position, Quaternion.identity);
+            nextFire = Time.time + fireRate;
+        }
     }
 }
