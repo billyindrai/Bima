@@ -14,7 +14,7 @@ public class KendaliPemain : MonoBehaviour {
     public Collider2D Lantai, ObjekPasif;
     // public Collider2D[] Rintangan;
 
-    public Text scoreText;
+    public Text scoreText,kunciText;
 
     public int numberOfHearts;
     public Image[] hearts;
@@ -26,7 +26,7 @@ public class KendaliPemain : MonoBehaviour {
     // public AudioSource jump,ikan,pukul;
 
     // public GameObject Portal;
-    public int TotalCoin;
+    public int TotalCoin,TotalKunci;
 
     public HealthBar healthBar;
 
@@ -39,7 +39,7 @@ public class KendaliPemain : MonoBehaviour {
     bool Mendarat2 = true;
 
     int JumlahCoin = 0;
-    
+    int JumlahKunci = 0;
     Vector3 posisiAwal;
 
     
@@ -55,6 +55,18 @@ public class KendaliPemain : MonoBehaviour {
         int Score = PlayerPrefs.GetInt("Score",0);
         int currentScore1 = JumlahCoin;
         PlayerPrefs.SetInt("Score",currentScore1);
+    }
+
+    public void TambahKunci() {
+        JumlahKunci += 1;
+        int Kunci = JumlahKunci;
+        kunciText.text = Kunci.ToString("0");
+    }
+
+    public void BukaKunci(){
+        if(JumlahKunci == TotalKunci){
+            Debug.Log("Buka");
+        }
     }
 
     public void UpdatePosisi(Vector3 Posisi) {

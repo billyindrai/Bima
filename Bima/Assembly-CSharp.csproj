@@ -80,7 +80,9 @@
     <Compile Include="Assets\Script\KendaliRintangan.cs" />
     <Compile Include="Assets\Script\KendaliRintangan1.cs" />
     <Compile Include="Assets\Script\KendaliTentara.cs" />
+    <Compile Include="Assets\Script\Kunci.cs" />
     <Compile Include="Assets\Script\Navigasi.cs" />
+    <Compile Include="Assets\Script\Penjara.cs" />
     <Compile Include="Assets\Script\Score.cs" />
     <Compile Include="Assets\Script\TentaraBullet.cs" />
     <Compile Include="Assets\Script\Timer.cs" />
