@@ -8,7 +8,7 @@ public class KendaliPemain : MonoBehaviour {
 
     public Rigidbody2D Bodi;
 
-    // public Animator animator;
+    public Animator animator;
 
     public Collider2D Sensor;
     public Collider2D Lantai, ObjekPasif;
@@ -87,45 +87,38 @@ public class KendaliPemain : MonoBehaviour {
         // for(int i=0; i < Rintangan.Length; i++ ){
         //     Mendarat2 = Physics2D.IsTouching(Sensor, Rintangan[i]);
         //         if (Input.GetKeyDown(KeyCode.Space) && Mendarat2 == true){
-        //             animator.SetBool("Jumping",true);
+        //             animator.SetBool("Jump",true);
         //             Bodi.velocity = Vector2.up * TinggiLompatan;
         //             // jump.Play();
         //         } else if (Mendarat2 == true){
-        //             animator.SetBool("Jumping",false);
+        //             animator.SetBool("Jump",false);
         //         }
         // }
 
         if (Input.GetKeyDown(KeyCode.X) && Mendarat == true) {
-            // animator.SetBool("Jumping",true);
+            animator.SetBool("Jump",true);
             Bodi.velocity = Vector2.up * TinggiLompatan;
             // jump.Play();
         }   else if (Mendarat == true){
-            // animator.SetBool("Jumping",false);
+            animator.SetBool("Jump",false);
         }   else if (Input.GetKeyDown(KeyCode.X) && Mendarat1 == true){
-            // animator.SetBool("Jumping",true);
+            animator.SetBool("Jump",true);
             Bodi.velocity = Vector2.up * TinggiLompatan;
             // jump.Play();
         }   else if (Mendarat1 == true){
-            // animator.SetBool("Jumping",false);
+            animator.SetBool("Jump",false);
         }
 
         // if (JumlahCoin == TotalCoin) {
         //     Portal.SetActive(true);
         // }      
-
-        // if (Input.GetButtonDown("Fire1")) {
-        //     pukul.Play();
-        //     animator.SetBool("Pukul",true);
-        // } else {
-        //     animator.SetBool("Pukul",false);
-        // }
     }
 
     void FixedUpdate() {
         float Akselerasi = Input.GetAxis("Horizontal");
         Bodi.velocity = new Vector2(Akselerasi * Kecepatan, Bodi.velocity.y);
 
-        // animator.SetFloat("Speed", Mathf.Abs(Akselerasi));
+        animator.SetFloat("Speed", Mathf.Abs(Akselerasi));
 
         if(Akselerasi > 0 && HadapKanan == false) {
             Berpaling();
@@ -139,11 +132,6 @@ public class KendaliPemain : MonoBehaviour {
 
     void Berpaling() {
         HadapKanan = !HadapKanan;
-
-        // Vector3 Skala = transform.localScale;
-        // Skala.x *= -1;
-        // transform.localScale = Skala;
-
         transform.Rotate(0f, 180f, 0f);
     }
 
