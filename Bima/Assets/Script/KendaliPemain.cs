@@ -12,7 +12,7 @@ public class KendaliPemain : MonoBehaviour {
 
     public Collider2D Sensor;
     public Collider2D Lantai, ObjekPasif;
-    // public Collider2D[] Rintangan;
+    public Collider2D[] Rintangan;
 
     public Text scoreText,kunciText;
 
@@ -84,16 +84,16 @@ public class KendaliPemain : MonoBehaviour {
         Mendarat = Physics2D.IsTouching(Sensor, Lantai);
         Mendarat1 = Physics2D.IsTouching(Sensor, ObjekPasif);
 
-        // for(int i=0; i < Rintangan.Length; i++ ){
-        //     Mendarat2 = Physics2D.IsTouching(Sensor, Rintangan[i]);
-        //         if (Input.GetKeyDown(KeyCode.Space) && Mendarat2 == true){
-        //             animator.SetBool("Jump",true);
-        //             Bodi.velocity = Vector2.up * TinggiLompatan;
-        //             // jump.Play();
-        //         } else if (Mendarat2 == true){
-        //             animator.SetBool("Jump",false);
-        //         }
-        // }
+        for(int i=0; i < Rintangan.Length; i++ ){
+            Mendarat2 = Physics2D.IsTouching(Sensor, Rintangan[i]);
+                if (Input.GetKeyDown(KeyCode.Space) && Mendarat2 == true){
+                    animator.SetBool("Jump",true);
+                    Bodi.velocity = Vector2.up * TinggiLompatan;
+                    // jump.Play();
+                } else if (Mendarat2 == true){
+                    animator.SetBool("Jump",false);
+                }
+        }
 
         if (Input.GetKeyDown(KeyCode.X) && Mendarat == true) {
             animator.SetBool("Jump",true);

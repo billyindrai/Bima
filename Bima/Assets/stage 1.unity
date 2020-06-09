@@ -566,6 +566,9 @@ MonoBehaviour:
   Sensor: {fileID: 411778147}
   Lantai: {fileID: 260693254}
   ObjekPasif: {fileID: 1782221837}
+  Rintangan:
+  - {fileID: 1792116852}
+  - {fileID: 1452813694}
   scoreText: {fileID: 946831408}
   kunciText: {fileID: 1782711604}
   numberOfHearts: 3
@@ -7574,17 +7577,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802139533}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.084843226, w: 0.9963944}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 910390422}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9.734}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 327.10004, y: 170.45001}
-  m_SizeDelta: {x: 55.46, y: 63.79}
+  m_AnchoredPosition: {x: 337.3097, y: 176.5}
+  m_SizeDelta: {x: 43.29, y: 23.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1802139535
 MonoBehaviour:
@@ -7604,7 +7607,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 06cc3b0839e9bc8409d6137e67a12f2e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6434870b3c7d5764582b1326ceab915d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
