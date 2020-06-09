@@ -7,6 +7,7 @@ public class TentaraBullet : MonoBehaviour {
 	public float speed = 20f;
 	public int damage = 1;
 	public Rigidbody2D rb;
+
 	// public GameObject impactEffect;
 	KendaliPemain target;
 	Vector2 moveDirection;

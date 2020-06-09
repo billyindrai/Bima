@@ -13,6 +13,7 @@ public class WeaponTentara : MonoBehaviour
     float fireRate;
     float nextFire;
 
+
 	void Start () {
 		fireRate = 1f;
         nextFire = Time.time;
@@ -30,7 +31,7 @@ public class WeaponTentara : MonoBehaviour
 
     void Shoot(){
         if(Time.time > nextFire){
-            Instantiate (bulletPrefab, transform.position, Quaternion.identity);
+            Instantiate (bulletPrefab, firePoint.position, firePoint.rotation);
             nextFire = Time.time + fireRate;
         }
     }
