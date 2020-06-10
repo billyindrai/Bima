@@ -25,7 +25,7 @@ public class Timer : MonoBehaviour
 
         if(akhir <= 0){
             akhir = 0;
-            SceneManager.LoadScene("theend");
+            // SceneManager.LoadScene("theend");
         }
     }
 }

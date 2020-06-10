@@ -67,15 +67,11 @@
     <Compile Include="Assets\Script\Bom.cs" />
     <Compile Include="Assets\Script\Bullet.cs" />
     <Compile Include="Assets\Script\Coin.cs" />
-    <Compile Include="Assets\Script\Finish.cs" />
     <Compile Include="Assets\Script\HealthBar.cs" />
     <Compile Include="Assets\Script\HighScore.cs" />
-    <Compile Include="Assets\Script\KendaliBurung.cs" />
     <Compile Include="Assets\Script\KendaliCekpoin.cs" />
-    <Compile Include="Assets\Script\KendaliEs.cs" />
     <Compile Include="Assets\Script\KendaliKamera.cs" />
     <Compile Include="Assets\Script\KendaliPemain.cs" />
-    <Compile Include="Assets\Script\KendaliPiranha.cs" />
     <Compile Include="Assets\Script\KendaliPortal.cs" />
     <Compile Include="Assets\Script\KendaliRintangan.cs" />
     <Compile Include="Assets\Script\KendaliRintangan1.cs" />
