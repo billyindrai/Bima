@@ -162,7 +162,7 @@ public class KendaliPemain : MonoBehaviour {
 		if (numberOfHearts > 0 && currentHealth == 0)
 		{
 			numberOfHearts -=1;
-            ResetHealth();
+            PemainMati();
 		}else if (numberOfHearts == 0 && currentHealth == 0){
             PemainMati();
         }

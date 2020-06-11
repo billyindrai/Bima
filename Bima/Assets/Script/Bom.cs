@@ -18,8 +18,8 @@ public class Bom : MonoBehaviour {
             Destroy(this.gameObject, 0.8f);
             Pemain.GetComponent<KendaliPemain>().TakeDamage();
             if(Pemain.GetComponent<KendaliPemain>().currentHealth <= 0){
-               Pemain.GetComponent<KendaliPemain>().numberOfHearts -= 2;
-               Pemain.GetComponent<KendaliPemain>().ResetHealth();
+                Pemain.GetComponent<KendaliPemain>().PemainMati();
+                Pemain.GetComponent<KendaliPemain>().numberOfHearts -= 1;   
             }
             // hit.Play();
 
