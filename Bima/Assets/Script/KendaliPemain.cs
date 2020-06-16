@@ -64,7 +64,7 @@ public class KendaliPemain : MonoBehaviour {
     }
 
     public void BukaKunci(){
-        if(JumlahKunci == TotalKunci){
+        if(Input.GetKeyDown(KeyCode.F) &&  JumlahKunci == TotalKunci){
             Debug.Log("Buka");
         }
     }
