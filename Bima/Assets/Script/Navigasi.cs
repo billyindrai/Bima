@@ -8,4 +8,8 @@ public class Navigasi : MonoBehaviour
     public void PindahHalaman(string NamaHalaman) {
         SceneManager.LoadScene(NamaHalaman);
     }
+
+    public void doExitGame() {
+     Application.Quit();
+ }
 }

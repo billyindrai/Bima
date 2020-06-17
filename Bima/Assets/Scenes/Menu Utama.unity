@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 13504306}
   - component: {fileID: 13504305}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Keluar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,8 +204,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 69126521}
-        m_MethodName: PindahHalaman
-        m_Mode: 5
+        m_MethodName: doExitGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 69126520}
   - component: {fileID: 69126521}
   m_Layer: 0
-  m_Name: Tempat Script
+  m_Name: Navigasi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 69126519}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4400838961849a04985862208a598a53, type: 3}
+  m_Script: {fileID: 11500000, guid: 7acfbfd86667c7e4d965713bb5a99050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &90497617
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 90497620}
   - component: {fileID: 90497619}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Lanjutkan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -383,7 +383,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Halaman 3
+          m_StringArgument: stage 1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &90497620
@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 220622742}
   - component: {fileID: 220622741}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Pengaturan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -512,7 +512,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Halaman 2
+          m_StringArgument: Pengaturan
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &220622742
@@ -826,7 +826,7 @@ GameObject:
   - component: {fileID: 707171294}
   - component: {fileID: 707171293}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Permainan Baru
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -953,7 +953,7 @@ GameObject:
   - component: {fileID: 1640970362}
   - component: {fileID: 1640970361}
   m_Layer: 0
-  m_Name: bggg
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class WeaponTentara : MonoBehaviour
 {   
-    public GameObject Pemain, Tentara;
+    public GameObject Pemain;
     public Transform firePoint;
 
     [SerializeField]

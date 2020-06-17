@@ -21,7 +21,7 @@ public class TentaraBullet : MonoBehaviour {
 	}
 
 
-	void OnTriggerEnter2D (Collider2D hitInfo)
+	void OnTriggerExit2D (Collider2D hitInfo)
 	{
 		KendaliPemain pemain = hitInfo.GetComponent<KendaliPemain>();
 		if (pemain != null)
