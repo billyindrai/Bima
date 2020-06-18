@@ -10,6 +10,8 @@ public class KendaliPemain : MonoBehaviour {
 
     public Animator animator;
 
+    public GameObject Die;
+
     public Collider2D Sensor;
     public Collider2D Lantai, ObjekPasif;
     public Collider2D[] Rintangan;
@@ -164,7 +166,7 @@ public class KendaliPemain : MonoBehaviour {
 		{
 			numberOfHearts -=1;
             PemainMati();
-		}else if (numberOfHearts == 0 && currentHealth == 0){
+		}else if (numberOfHearts < 0 && currentHealth == 0){
             PemainMati();
         }
 	}
@@ -176,17 +178,20 @@ public class KendaliPemain : MonoBehaviour {
     }
 
     public void PemainMati() {
-        transform.position = posisiAwal;
-        Bodi.velocity = new Vector2(0f, 0f);
-        ResetHealth();
+        if(numberOfHearts ==0){
+            Die.GetComponent<Die>().Died();
+        }else{
+            ResetHealth();
+            transform.position = posisiAwal;
+            Bodi.velocity = new Vector2(0f, 0f);
+        }
     }
 
      void OnCollisionEnter2D(Collision2D Kena) {
         if (Kena.gameObject.name == "Sensor Lubang" && numberOfHearts > 0) {
             numberOfHearts -= 1;
             PemainMati();
-        } else if (Kena.gameObject.name == "Sensor Lubang" && numberOfHearts == 0) {
-            // SceneManager.LoadScene("theend");
+        } else if (Kena.gameObject.name == "Sensor Lubang" && numberOfHearts < 0) {
             PemainMati();
         }
     }

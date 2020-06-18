@@ -67,6 +67,7 @@
     <Compile Include="Assets\Script\Bom.cs" />
     <Compile Include="Assets\Script\Bullet.cs" />
     <Compile Include="Assets\Script\Coin.cs" />
+    <Compile Include="Assets\Script\Die.cs" />
     <Compile Include="Assets\Script\HealthBar.cs" />
     <Compile Include="Assets\Script\HighScore.cs" />
     <Compile Include="Assets\Script\KendaliCekpoin.cs" />
@@ -81,11 +82,11 @@
     <Compile Include="Assets\Script\Pause.cs" />
     <Compile Include="Assets\Script\Penjara.cs" />
     <Compile Include="Assets\Script\Score.cs" />
+    <Compile Include="Assets\Script\Setting.cs" />
     <Compile Include="Assets\Script\TentaraBullet.cs" />
     <Compile Include="Assets\Script\Timer.cs" />
     <Compile Include="Assets\Script\Weapon.cs" />
     <Compile Include="Assets\Script\WeaponTentara.cs" />
-    <Compile Include="Assets\Script\setting.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/Billy/Kuliah/Pengembangan Game/Bima/Bima/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
