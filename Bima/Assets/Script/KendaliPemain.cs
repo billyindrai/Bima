@@ -178,7 +178,7 @@ public class KendaliPemain : MonoBehaviour {
     }
 
     public void PemainMati() {
-        if(numberOfHearts < 0){
+        if(numberOfHearts == 0){
             currentHealth -= 4;
             healthBar.SetHealth(currentHealth); 
             Die.GetComponent<Die>().Died();
