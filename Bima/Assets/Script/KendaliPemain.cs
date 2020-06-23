@@ -48,7 +48,6 @@ public class KendaliPemain : MonoBehaviour {
     public void TambahCoin() {
         JumlahCoin += 1;
         scoreText.text = JumlahCoin.ToString("0");
-        // ikan.Play();
 
         // int currentHighScore = PlayerPrefs.GetInt("HighScore",0);
         // int currentScore = JumlahCoin+currentHighScore;
