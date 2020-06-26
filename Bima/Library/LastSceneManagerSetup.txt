@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/stage 1.unity
-=======
-- path: Assets/Scenes/AkhirCerita.unity
->>>>>>> 0ee93ef96e8aec05713a851a4078e14e2c666c72
   isLoaded: 1
   isActive: 1
   isSubScene: 0

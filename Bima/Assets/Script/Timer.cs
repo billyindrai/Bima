@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     float akhir = 0f;
-    float awal = 150f;
+    float awal = 180f;
 
     [SerializeField] Text countdown;
    
