@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class KendaliBos : MonoBehaviour {
 
     public GameObject Pemain;
@@ -17,18 +18,42 @@ public class KendaliBos : MonoBehaviour {
     float Tujuan;
 
     // public Animator animator;
-    public int health = 100;
+    public int health;
+    public int maxHealth;
+    public GameObject healthBarUI;
+    public Slider slider;
 
     private Vector3 startingposition;
 
+
+    void Start(){
+        health = maxHealth;
+        healthBarUI.SetMaxHealth(maxHealth);
+    }
+
+    void Update(){
+    }
+
 	public void TakeDamage (int damage)
 	{
-		health -= damage;
-
-		if (health <= 0)
+		if(health > 0){
+            health -= damage;
+            healthBarUI.SetHealth(health); 
+        }else if (health <= 0)
 		{
 			Die();
 		}
+	}
+
+    public void SetMaxHealth(int health)
+	{
+		slider.maxValue = health;
+		slider.value = health;
+	}
+
+    public void SetHealth(int health)
+	{
+		slider.value = health;
 	}
 
 	void Die ()

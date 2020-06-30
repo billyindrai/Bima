@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour {
 
 	public float speed = 20f;
-	public int damage = 20;
+	int damage = 1;
 	public Rigidbody2D rb;
 	// public GameObject impactEffect;
 
@@ -13,7 +13,7 @@ public class Bullet : MonoBehaviour {
 		rb.velocity = transform.right * speed;
 	}
 
-	void OnTriggerExit2D (Collider2D hitInfo)
+	private void OnTriggerExit2D (Collider2D hitInfo)
 	{
 		KendaliTentara tentara = hitInfo.GetComponent<KendaliTentara>();
 		if (tentara != null)

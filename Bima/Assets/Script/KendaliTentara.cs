@@ -17,15 +17,21 @@ public class KendaliTentara : MonoBehaviour {
     float Tujuan;
 
     // public Animator animator;
-    public int health = 100;
+    public int maxHealth;
+    public int health;
 
     private Vector3 startingposition;
 
+    void Start(){
+        health = maxHealth;
+    }
+
+
 	public void TakeDamage (int damage)
 	{
-		health -= damage;
-
-		if (health <= 0)
+        if(health > 0){
+            health -= damage;
+        }else if (health <= 0)
 		{
 			Die();
 		}

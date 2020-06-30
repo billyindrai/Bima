@@ -12,7 +12,7 @@ public class SingleLevel : MonoBehaviour
 
     void Start()
     {
-        txtHighScore.text = PlayerPrefs.GetInt("HighScore",0).ToString("0");
+        txtHighScore.text = PlayerPrefs.GetInt("Score",0).ToString("0");
     }
 
     public void BackButton()

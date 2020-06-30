@@ -47,15 +47,15 @@ public class KendaliPemain : MonoBehaviour {
     
     public void TambahCoin() {
         JumlahCoin += 1;
-        scoreText.text = JumlahCoin.ToString("0");
-
-        // int currentHighScore = PlayerPrefs.GetInt("HighScore",0);
-        // int currentScore = JumlahCoin+currentHighScore;
-        // PlayerPrefs.SetInt("HighScore",currentScore);
+        scoreText.text = JumlahCoin.ToString("0");   
 
         int Score = PlayerPrefs.GetInt("Score",0);
         int currentScore1 = JumlahCoin;
         PlayerPrefs.SetInt("Score",currentScore1);
+
+        // int currentHighScore = PlayerPrefs.GetInt("HighScore",0);
+        // int currentScore = JumlahCoin+currentHighScore;
+        // PlayerPrefs.SetInt("HighScore",currentScore);
     }
 
     public void TambahKunci() {
