@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class KendaliBos : MonoBehaviour {
 
-    public GameObject Pemain;
+    public GameObject Pemain, Kunci;
 
     public AudioSource hit;
 
@@ -20,7 +20,7 @@ public class KendaliBos : MonoBehaviour {
     // public Animator animator;
     public int health;
     public int maxHealth;
-    public GameObject healthBarUI;
+    public HealthBarBos healthBarUI;
     public Slider slider;
 
     private Vector3 startingposition;
@@ -29,6 +29,7 @@ public class KendaliBos : MonoBehaviour {
     void Start(){
         health = maxHealth;
         healthBarUI.SetMaxHealth(maxHealth);
+        Kunci.SetActive(false);
     }
 
     void Update(){
@@ -45,21 +46,11 @@ public class KendaliBos : MonoBehaviour {
 		}
 	}
 
-    public void SetMaxHealth(int health)
-	{
-		slider.maxValue = health;
-		slider.value = health;
-	}
-
-    public void SetHealth(int health)
-	{
-		slider.value = health;
-	}
-
 	void Die ()
-	{
-		// Instantiate(deathEffect, transform.position, Quaternion.identity);
+	{	
+        // Instantiate(deathEffect, transform.position, Quaternion.identity);
 		Destroy(gameObject);
+        Kunci.SetActive(true);
 	}
 
     void FixedUpdate() {

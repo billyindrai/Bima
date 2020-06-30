@@ -22,6 +22,12 @@ public class Bullet : MonoBehaviour {
 		}
 		// Instantiate(impactEffect, transform.position, transform.rotation);
 		Destroy(gameObject);
+
+		KendaliBos bos = hitInfo.GetComponent<KendaliBos>();
+		if (bos != null){
+			bos.TakeDamage(2);
+		}
+		Destroy(gameObject);
 	}
 	
 }

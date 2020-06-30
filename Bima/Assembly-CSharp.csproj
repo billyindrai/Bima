@@ -70,6 +70,7 @@
     <Compile Include="Assets\Script\Dialog.cs" />
     <Compile Include="Assets\Script\Die.cs" />
     <Compile Include="Assets\Script\HealthBar.cs" />
+    <Compile Include="Assets\Script\HealthBarBos.cs" />
     <Compile Include="Assets\Script\HighScore.cs" />
     <Compile Include="Assets\Script\KendaliBos.cs" />
     <Compile Include="Assets\Script\KendaliCekpoin.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\Script\KendaliTentara.cs" />
     <Compile Include="Assets\Script\Kunci.cs" />
     <Compile Include="Assets\Script\LevelSelection.cs" />
+    <Compile Include="Assets\Script\Misi.cs" />
     <Compile Include="Assets\Script\Navigasi.cs" />
     <Compile Include="Assets\Script\Pause.cs" />
     <Compile Include="Assets\Script\Penjara.cs" />
