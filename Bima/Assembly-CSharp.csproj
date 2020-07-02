@@ -73,6 +73,7 @@
     <Compile Include="Assets\Script\HealthBarBos.cs" />
     <Compile Include="Assets\Script\HighScore.cs" />
     <Compile Include="Assets\Script\KendaliBos.cs" />
+    <Compile Include="Assets\Script\KendaliCannon.cs" />
     <Compile Include="Assets\Script\KendaliCekpoin.cs" />
     <Compile Include="Assets\Script\KendaliKamera.cs" />
     <Compile Include="Assets\Script\KendaliPemain.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Assets\Script\Misi.cs" />
     <Compile Include="Assets\Script\Navigasi.cs" />
     <Compile Include="Assets\Script\Pause.cs" />
+    <Compile Include="Assets\Script\Pendulum.cs" />
     <Compile Include="Assets\Script\Penjara.cs" />
     <Compile Include="Assets\Script\Score.cs" />
     <Compile Include="Assets\Script\Setting.cs" />

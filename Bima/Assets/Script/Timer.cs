@@ -10,6 +10,8 @@ public class Timer : MonoBehaviour
     float akhir = 0f;
     float awal = 180f;
 
+    public GameObject Die;
+
     [SerializeField] Text countdown;
    
     void Start()
@@ -25,7 +27,7 @@ public class Timer : MonoBehaviour
 
         if(akhir <= 0){
             akhir = 0;
-            // SceneManager.LoadScene("theend");
+            Die.GetComponent<Die>().Died();
         }
     }
 }
