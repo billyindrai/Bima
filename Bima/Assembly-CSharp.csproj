@@ -66,9 +66,11 @@
     <Compile Include="Assets\Script\Ammo.cs" />
     <Compile Include="Assets\Script\Bom.cs" />
     <Compile Include="Assets\Script\Bullet.cs" />
+    <Compile Include="Assets\Script\Cannon.cs" />
     <Compile Include="Assets\Script\Coin.cs" />
     <Compile Include="Assets\Script\Dialog.cs" />
     <Compile Include="Assets\Script\Die.cs" />
+    <Compile Include="Assets\Script\Gerigi.cs" />
     <Compile Include="Assets\Script\HealthBar.cs" />
     <Compile Include="Assets\Script\HealthBarBos.cs" />
     <Compile Include="Assets\Script\HighScore.cs" />
