@@ -16,6 +16,7 @@ public class SingleLevel : MonoBehaviour
     void Start()
     {
         txtHighScore.text = PlayerPrefs.GetInt("Score",0).ToString("0");
+        _starsNum = PlayerPrefs.GetInt("Score",0);
         PressStartButton();
     }
 

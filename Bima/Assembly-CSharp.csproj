@@ -79,7 +79,6 @@
     <Compile Include="Assets\Script\KendaliPortal.cs" />
     <Compile Include="Assets\Script\KendaliRintangan.cs" />
     <Compile Include="Assets\Script\KendaliRintangan1.cs" />
-    <Compile Include="Assets\Script\KendaliStar.cs" />
     <Compile Include="Assets\Script\KendaliTentara.cs" />
     <Compile Include="Assets\Script\Kunci.cs" />
     <Compile Include="Assets\Script\LevelSelection.cs" />
