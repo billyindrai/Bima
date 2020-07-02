@@ -16,27 +16,29 @@ public class SingleLevel : MonoBehaviour
     void Start()
     {
         txtHighScore.text = PlayerPrefs.GetInt("Score",0).ToString("0");
-        _starsNum = PlayerPrefs.GetInt("Score",0);
+        _starsNum = PlayerPrefs.GetInt("Score");
         PressStartButton();
     }
 
     public void BackButton()
     {
-        SceneManager.LoadScene("00_Level Selection");
+        SceneManager.LoadScene(2);
     }
 
 
     public void PressStartButton()
     {
         PlayerPrefs.SetInt("Score",_starsNum);
-        if (_starsNum <= 5){
+        if (_starsNum <= 0){
+            currentStarsNum += 0;
+        }else if (_starsNum >= 1 && _starsNum <= 10){
             stars[0].SetActive(true);
             currentStarsNum += 1;
-        }else if(_starsNum >= 6 && _starsNum <= 15){
+        }else if(_starsNum >= 11 && _starsNum <= 20){
             stars[0].SetActive(true);
             stars[1].SetActive(true);
             currentStarsNum += 2;
-        }else if(_starsNum >=16) {
+        }else if(_starsNum >=20) {
             stars[0].SetActive(true);
             stars[1].SetActive(true);
             stars[2].SetActive(true);

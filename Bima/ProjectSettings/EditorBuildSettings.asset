@@ -5,12 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/intro.unity
-    guid: 8e906c62729635c418af6662c75cbd35
   - enabled: 1
     path: Assets/Scenes/Menu Utama.unity
     guid: ffc35862fc856d94c8f6b0adeeb2b7e2
@@ -29,18 +23,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dialog.unity
     guid: c2ea271ffeb8668439dea8005b4ba4fd
-  - enabled: 1
-    path: Assets/Scenes/Dialog 2.unity
-    guid: 21d487ce5390b75469f6453889187a2c
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/stage 1.unity
     guid: febb817cc75903c47a4fc78511fd23ee
   - enabled: 1
     path: Assets/Scenes/AkhirCerita.unity
     guid: c166877123e5ca646aae37d7e62d3e22
-  - enabled: 1
-    path: Assets/Scenes/stage 2.unity
-    guid: 19cdbe1f8998e414c9bec74c32589f1d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/stage 3.unity
     guid: 336f8a88828385e4e80438c58493cc02
