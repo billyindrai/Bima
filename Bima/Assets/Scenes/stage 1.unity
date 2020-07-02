@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 37114564}
   m_Layer: 0
   m_Name: coin 5 (11)
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 131033080}
   m_Layer: 0
   m_Name: coin 5 (13)
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2086,7 +2086,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7842394434624421253, guid: aa24e68978ed5db44a776fd8f5b59954,
     type: 3}
   ammoText: {fileID: 555332298}
-  maxAmmo: 20
+  maxAmmo: 100
 --- !u!114 &190958526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2403,7 +2403,7 @@ GameObject:
   - component: {fileID: 258181900}
   m_Layer: 0
   m_Name: coin 5 (2)
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10852,7 +10852,7 @@ GameObject:
   - component: {fileID: 377271272}
   m_Layer: 0
   m_Name: coin 5 (4)
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10995,7 +10995,7 @@ GameObject:
   - component: {fileID: 403824077}
   m_Layer: 0
   m_Name: coin1
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11897,7 +11897,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.422119, y: -0.11999941, z: -9}
+  m_LocalPosition: {x: -10.417846, y: -0.11999941, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1578598694}
@@ -12757,7 +12757,7 @@ GameObject:
   - component: {fileID: 779209303}
   m_Layer: 0
   m_Name: coin 5 (3)
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13122,7 +13122,7 @@ GameObject:
   - component: {fileID: 809926698}
   m_Layer: 0
   m_Name: coin3
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13518,7 +13518,7 @@ GameObject:
   - component: {fileID: 908334856}
   m_Layer: 0
   m_Name: coin 5 (5)
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13786,7 +13786,7 @@ GameObject:
   - component: {fileID: 928010893}
   m_Layer: 0
   m_Name: coin 5 (10)
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14547,7 +14547,7 @@ GameObject:
   - component: {fileID: 1020556471}
   m_Layer: 0
   m_Name: coin 5
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15235,7 +15235,7 @@ GameObject:
   - component: {fileID: 1116156987}
   m_Layer: 0
   m_Name: coin 5 (12)
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16412,7 +16412,7 @@ GameObject:
   - component: {fileID: 1284190302}
   m_Layer: 0
   m_Name: coin 5 (1)
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17535,7 +17535,7 @@ GameObject:
   - component: {fileID: 1465924877}
   m_Layer: 0
   m_Name: coin 5 (8)
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17944,7 +17944,7 @@ GameObject:
   - component: {fileID: 1518988417}
   m_Layer: 0
   m_Name: coin2
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18087,7 +18087,7 @@ GameObject:
   - component: {fileID: 1524607262}
   m_Layer: 0
   m_Name: coin 5 (6)
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18497,7 +18497,7 @@ GameObject:
   - component: {fileID: 1615005796}
   m_Layer: 0
   m_Name: coin 5 (7)
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18640,7 +18640,7 @@ GameObject:
   - component: {fileID: 1619765128}
   m_Layer: 0
   m_Name: coin 5 (9)
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19521,7 +19521,7 @@ GameObject:
   - component: {fileID: 1803920840}
   m_Layer: 0
   m_Name: coin
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20565,7 +20565,7 @@ GameObject:
   - component: {fileID: 2042253390}
   m_Layer: 0
   m_Name: coin4
-  m_TagString: Untagged
+  m_TagString: coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

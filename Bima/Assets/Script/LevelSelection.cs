@@ -14,7 +14,7 @@ public class LevelSelection : MonoBehaviour
 
     private void Start()
     {
-        PlayerPrefs.DeleteAll(); //Delete all buat NEW GAME
+        // PlayerPrefs.DeleteAll(); //Delete all buat NEW GAME
     }
 
     private void Update()

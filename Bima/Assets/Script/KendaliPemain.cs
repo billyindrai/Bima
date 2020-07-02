@@ -13,7 +13,7 @@ public class KendaliPemain : MonoBehaviour {
     public GameObject Die;
 
     public Collider2D Sensor;
-    public Collider2D Lantai, ObjekPasif,Lantai2;
+    public Collider2D Lantai, ObjekPasif;
     public Collider2D[] Rintangan;
 
     public Text scoreText,kunciText;
@@ -85,7 +85,7 @@ public class KendaliPemain : MonoBehaviour {
     void Update() {
         Mendarat = Physics2D.IsTouching(Sensor, Lantai);
         Mendarat1 = Physics2D.IsTouching(Sensor, ObjekPasif);
-        Mendarat2 = Physics2D.IsTouching(Sensor, Lantai2);
+
         for(int i=0; i < Rintangan.Length; i++ ){
             Mendarat2 = Physics2D.IsTouching(Sensor, Rintangan[i]);
                 if (Input.GetKeyDown(KeyCode.X) && Mendarat2 == true){
