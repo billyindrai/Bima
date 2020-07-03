@@ -23,18 +23,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dialog.unity
     guid: c2ea271ffeb8668439dea8005b4ba4fd
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/stage 1.unity
     guid: febb817cc75903c47a4fc78511fd23ee
   - enabled: 1
+    path: Assets/Scenes/stage 2.unity
+    guid: b0bac113bf12dfd43b8ad99f8c0c2433
+  - enabled: 1
     path: Assets/Scenes/AkhirCerita.unity
     guid: c166877123e5ca646aae37d7e62d3e22
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/stage 3.unity
     guid: 336f8a88828385e4e80438c58493cc02

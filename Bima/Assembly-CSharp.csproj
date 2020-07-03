@@ -75,7 +75,6 @@
     <Compile Include="Assets\Script\HealthBarBos.cs" />
     <Compile Include="Assets\Script\HighScore.cs" />
     <Compile Include="Assets\Script\KendaliBos.cs" />
-    <Compile Include="Assets\Script\KendaliCannon.cs" />
     <Compile Include="Assets\Script\KendaliCekpoin.cs" />
     <Compile Include="Assets\Script\KendaliKamera.cs" />
     <Compile Include="Assets\Script\KendaliPemain.cs" />

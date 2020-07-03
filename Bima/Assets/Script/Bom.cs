@@ -15,13 +15,13 @@ public class Bom : MonoBehaviour {
         if (Kena.gameObject.name == Pemain.name && Pemain.GetComponent<KendaliPemain>().numberOfHearts > 0 ) {
             Pemain.GetComponent<KendaliPemain>().currentHealth -= 2;
             animator.SetBool("playboom",true);
+            hit.Play();
             Destroy(this.gameObject, 0.8f);
             Pemain.GetComponent<KendaliPemain>().TakeDamage();
             if(Pemain.GetComponent<KendaliPemain>().currentHealth <= 0){
                 Pemain.GetComponent<KendaliPemain>().PemainMati();
                 Pemain.GetComponent<KendaliPemain>().numberOfHearts -= 1;   
             }
-            // hit.Play();
 
             // animator.SetBool("Hurt",true);
             // if(Pemain.transform.position.x < transform.position.x){
@@ -33,6 +33,7 @@ public class Bom : MonoBehaviour {
             // SceneManager.LoadScene("theend");
             Pemain.GetComponent<KendaliPemain>().currentHealth -= 2;
             animator.SetBool("playboom",true);
+            hit.Play();
             Destroy(this.gameObject, 0.8f);
             Pemain.GetComponent<KendaliPemain>().TakeDamage();
             if(Pemain.GetComponent<KendaliPemain>().currentHealth <= 0){

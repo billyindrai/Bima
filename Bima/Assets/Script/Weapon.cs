@@ -9,6 +9,8 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
 
+    public AudioSource nembak,habis,peluru;
+
     public Text ammoText;
 
     public int maxAmmo = 10;
@@ -24,7 +26,9 @@ public class Weapon : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Z) && currentAmmo > 0){
             Shoot();
+            nembak.Play();
         }else if(Input.GetKeyDown(KeyCode.Z) && currentAmmo <= 0){
+            habis.Play();
             Debug.Log("Habis");    
         }       
     }
@@ -36,7 +40,8 @@ public class Weapon : MonoBehaviour
     }
 
     public void TambahAmmo(){
-        currentAmmo += 1;
+        currentAmmo += 2;
+        peluru.Play();
         ammoText.text = currentAmmo.ToString("0");
     }
 

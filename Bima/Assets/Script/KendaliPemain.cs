@@ -25,7 +25,7 @@ public class KendaliPemain : MonoBehaviour {
     public float Kecepatan;
     public float TinggiLompatan;
 
-    // public AudioSource jump,ikan,pukul;
+    public AudioSource jump,coin,misi,kena;
 
     // public GameObject Portal;
     public int TotalCoin,TotalKunci;
@@ -47,7 +47,8 @@ public class KendaliPemain : MonoBehaviour {
     
     public void TambahCoin() {
         JumlahCoin += 1;
-        scoreText.text = JumlahCoin.ToString("0");   
+        scoreText.text = JumlahCoin.ToString("0");
+        coin.Play();   
 
         int Score = PlayerPrefs.GetInt("Score",0);
         int currentScore1 = JumlahCoin;
@@ -59,6 +60,7 @@ public class KendaliPemain : MonoBehaviour {
     }
 
     public void TambahKunci() {
+        misi.Play();
         JumlahKunci += 1;
         int Kunci = JumlahKunci;
         kunciText.text = Kunci.ToString("0");
@@ -91,7 +93,7 @@ public class KendaliPemain : MonoBehaviour {
                 if (Input.GetKeyDown(KeyCode.X) && Mendarat2 == true){
                     animator.SetBool("Jump",true);
                     Bodi.velocity = Vector2.up * TinggiLompatan;
-                    // jump.Play();
+                    jump.Play();
                 } else if (Mendarat2 == true){
                     animator.SetBool("Jump",false);
                 }
@@ -100,13 +102,13 @@ public class KendaliPemain : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.X) && Mendarat == true) {
             animator.SetBool("Jump",true);
             Bodi.velocity = Vector2.up * TinggiLompatan;
-            // jump.Play();
+            jump.Play();
         }   else if (Mendarat == true){
             animator.SetBool("Jump",false);
         }   else if (Input.GetKeyDown(KeyCode.X) && Mendarat1 == true){
             animator.SetBool("Jump",true);
             Bodi.velocity = Vector2.up * TinggiLompatan;
-            // jump.Play();
+            jump.Play();
         }   else if (Mendarat1 == true){
             animator.SetBool("Jump",false);
         }
@@ -159,6 +161,7 @@ public class KendaliPemain : MonoBehaviour {
     public void KenaDamage(int damage)
 	{
 		currentHealth -= damage;
+        kena.Play();
         healthBar.SetHealth(currentHealth); 
 
 		if (numberOfHearts > 0 && currentHealth == 0)
