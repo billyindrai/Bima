@@ -83,6 +83,7 @@
     <Compile Include="Assets\Script\KendaliRintangan1.cs" />
     <Compile Include="Assets\Script\KendaliTentara.cs" />
     <Compile Include="Assets\Script\Kunci.cs" />
+    <Compile Include="Assets\Script\Kunyit.cs" />
     <Compile Include="Assets\Script\LevelSelection.cs" />
     <Compile Include="Assets\Script\Misi.cs" />
     <Compile Include="Assets\Script\Navigasi.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Assets\Script\UiManager.cs" />
     <Compile Include="Assets\Script\Weapon.cs" />
     <Compile Include="Assets\Script\WeaponTentara.cs" />
+    <Compile Include="Assets\Script\burung.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
@@ -357,6 +359,9 @@
     </Reference>
     <Reference Include="UnityEngine.XRModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>E:/Billy/Kuliah/Pengembangan Game/Bima/Bima/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.5f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -703,6 +708,20 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.5f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{C6E6E3A6-FBC0-FCFE-AA98-2B0EF5E3BC3B}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{4D43F3D5-29B8-9C4E-3827-E0C84E56A9A3}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{08C3F4D7-1FEA-4B6F-4111-2435D3BBC181}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

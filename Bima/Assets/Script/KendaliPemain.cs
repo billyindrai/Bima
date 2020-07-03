@@ -13,7 +13,7 @@ public class KendaliPemain : MonoBehaviour {
     public GameObject Die;
 
     public Collider2D Sensor;
-    public Collider2D Lantai, ObjekPasif;
+    public Collider2D Lantai, ObjekPasif, LantaiBos;
     public Collider2D[] Rintangan;
 
     public Text scoreText,kunciText;
@@ -39,6 +39,7 @@ public class KendaliPemain : MonoBehaviour {
     bool Mendarat = true;
     bool Mendarat1 = true;
     bool Mendarat2 = true;
+    bool Mendarat3 = true;
 
     int JumlahCoin = 0;
     int JumlahKunci = 0;
@@ -87,6 +88,7 @@ public class KendaliPemain : MonoBehaviour {
     void Update() {
         Mendarat = Physics2D.IsTouching(Sensor, Lantai);
         Mendarat1 = Physics2D.IsTouching(Sensor, ObjekPasif);
+        Mendarat3 = Physics2D.IsTouching(Sensor, LantaiBos);
 
         for(int i=0; i < Rintangan.Length; i++ ){
             Mendarat2 = Physics2D.IsTouching(Sensor, Rintangan[i]);
@@ -111,11 +113,17 @@ public class KendaliPemain : MonoBehaviour {
             jump.Play();
         }   else if (Mendarat1 == true){
             animator.SetBool("Jump",false);
+        }   else if (Input.GetKeyDown(KeyCode.X) && Mendarat3 == true){
+            animator.SetBool("Jump",true);
+            Bodi.velocity = Vector2.up * TinggiLompatan;
+            jump.Play();
+        }   else if (Mendarat3 == true){
+            animator.SetBool("Jump",false);
         }
-
         // if (JumlahCoin == TotalCoin) {
         //     Portal.SetActive(true);
         // }      
+    
     }
 
     void FixedUpdate() {

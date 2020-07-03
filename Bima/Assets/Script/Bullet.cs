@@ -28,6 +28,12 @@ public class Bullet : MonoBehaviour {
 			bos.TakeDamage(2);
 		}
 		Destroy(gameObject);
+
+		burung burung = hitInfo.GetComponent<burung>();
+		if (burung != null){
+			burung.TakeDamage(3);
+		}
+		Destroy(gameObject);
 	}
 	
 }
